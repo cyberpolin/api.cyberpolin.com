@@ -1,0 +1,11 @@
+node_modules
+build
+.next/
+.keystone/
+keystone.db
+*.log
+.env
+.env.local
+new
+# local ssl
+*.pem
