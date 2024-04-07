@@ -14,15 +14,15 @@ export default async function(req, res, createContext) {
         
     })
     const data = await post.json()
-       if (!data.success) {
-        await ctx.prisma.hire.create({data:{
-            name,
-            email: from,
-            content: text,
-        }})
-        
-        
-    } 
+        if (data.success) {
+          await ctx.prisma.hire.create({
+            data: {
+              name,
+              email: from,
+              content: text,
+            },
+          })
+        } 
     res.send(data)
     
     
